@@ -1,16 +1,57 @@
-# React + Vite
+# Yukichi-UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modular, lightweight React component library built with modern web standards.
 
-Currently, two official plugins are available:
+## 🤖 AI Assistant
+This project was co-created with **Antigravity**, an agentic AI coding assistant by **Google DeepMind**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Overview
+Yukichi-UI provides a set of reusable, accessible, and customizable UI components designed to streamline React application development. It serves as both a foundation for building user interfaces and a playground for component development.
 
-## React Compiler
+## 🛠 Tech Stack
+- **Framework**: [React 19](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Styling**: Vanilla CSS
+- **Linting**: ESLint
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📂 Project Structure
+```text
+yukichi-ui/
+├── src/
+│   ├── components/      # Reusable UI components (Button, NavBar, Checkbox, etc.)
+│   └── App.jsx          # Component Playground & Demo
+```
 
-## Expanding the ESLint configuration
+## ⚡ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+- Node.js (Latest LTS recommended)
+
+### Installation
+1. Clone the repository (if applicable) or navigate to the project directory.
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server to view the playground:
+   ```bash
+   npm run dev
+   ```
+
+## 📖 Usage
+Import components directly into your React application:
+
+```jsx
+import { Button, TextField } from './components';
+
+function MyForm() {
+  return (
+    <div style={{ display: 'flex', gap: '1rem', flexDirection: 'column' }}>
+      <TextField label="Username" placeholder="Enter username" />
+      <Button>Submit</Button>
+    </div>
+  );
+}
+```
