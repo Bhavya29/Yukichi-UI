@@ -1,0 +1,64 @@
+.yu-textfield {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.yu-textfield__label {
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.yu-textfield__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.yu-textfield__input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-text-light);
+    /* Will refine color in index.css if needed to match design system more */
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease-in-out;
+}
+
+.yu-textfield__input::placeholder {
+    color: #9ca3af;
+    /* Gray 400 */
+}
+
+.yu-textfield__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+    /* Primary color with opacity */
+}
+
+.yu-textfield__input:disabled {
+    background-color: var(--color-surface);
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.yu-textfield--error .yu-textfield__input {
+    border-color: #ef4444;
+    /* Red 500 */
+}
+
+.yu-textfield--error .yu-textfield__input:focus {
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+.yu-textfield__error-message {
+    font-size: 0.75rem;
+    color: #ef4444;
+}

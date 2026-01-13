@@ -1,0 +1,59 @@
+.yu-checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1rem;
+    user-select: none;
+}
+
+.yu-checkbox__input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.yu-checkbox__checkmark {
+    position: relative;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: var(--color-background);
+    border: 1px solid var(--color-text-light);
+    border-radius: var(--radius-sm);
+    margin-right: 0.5rem;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yu-checkbox:hover .yu-checkbox__input~.yu-checkbox__checkmark {
+    border-color: var(--color-primary);
+}
+
+.yu-checkbox__input:checked~.yu-checkbox__checkmark {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.yu-checkbox__icon {
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.yu-checkbox__input:checked~.yu-checkbox__checkmark .yu-checkbox__icon {
+    opacity: 1;
+}
+
+.yu-checkbox__input:focus~.yu-checkbox__checkmark {
+    box-shadow: 0 0 0 2px var(--color-background), 0 0 0 4px var(--color-primary);
+}
+
+.yu-checkbox--disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
